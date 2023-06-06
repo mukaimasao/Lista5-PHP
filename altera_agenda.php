@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1>Alteração de Agendas - IFSP</h1>
-    <form action="altera_agenda_exe.php" method="POST">
+    <form action="altera_agenda_exe.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id_agenda" value="<?php echo $row['id_agenda']?>">
         <div>
             <label for="nome">Nome</label>
@@ -845,6 +845,10 @@
         <div>
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" value="<?php echo $row['email']?>">
+        </div>
+        <div>
+            <img src="<?php echo $row['foto_agenda'] ?> " width='80' height='100'>
+            <input type="file" name="foto" id="foto" accept="image/*" value="<?php $row['foto_agenda'] ?>">
         </div>
         <label for="data_cadastro">Data do Cadastro</label>
         <input type="text" name="data_cadastro" value="<?php echo $row['dt_cadastro']?>" readonly="true">
