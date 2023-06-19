@@ -15,6 +15,7 @@
         /*mysqli_fetch_array retorna apenas uma kinha dos registros */
         $row = mysqli_fetch_array($result);
     ?>
+    <div class="">
     <h1>Consulta de Agendas:</h1>
     <table align="center" border="1" width="700">
         <tr>
@@ -60,5 +61,7 @@
         ?>
         <a href="index.php">Voltar</a>
     </table>
+    </div>
+    
 </body>
 </html>
